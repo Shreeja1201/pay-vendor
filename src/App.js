@@ -27,7 +27,7 @@ function App() {
         <img
           src={mewtIcon}
           alt="Mewt Icon"
-          style={{ width: "20%", height: "20%" }}
+          style={{ width: "20%", height: "20%",backgroundColor:'gray' }}
         ></img>
       </div>
 
