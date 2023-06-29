@@ -20,14 +20,15 @@ function App() {
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-start",
+          justifyContent: "space-around",
+          marginBottom:'20px'
         }}
       >
         <h1>Make vendor payment through credit card</h1>
         <img
           src={mewtIcon}
           alt="Mewt Icon"
-          style={{ width: "20%", height: "20%",backgroundColor:'gray' }}
+          style={{ width: "auto", height: "auto",backgroundColor:'gray' }}
         ></img>
       </div>
 
