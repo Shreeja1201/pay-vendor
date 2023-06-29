@@ -3,23 +3,16 @@ import { useState } from 'react';
 
 function OTP() {
   const [otpToken, setOtpToken] = useState('');
-  const [correctOTP, setCorrectOTP] = useState(false);
 
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    if (correctOTP) {
       navigate('/options');
-    } else {
-      alert('Enter correct OTP');
-    }
+    
   };
 
   const handleOtpToken = (event) => {
     const token = event.target.value;
-    if(token.length>4){
-      token=token.slice(0,4)
-    }
     setOtpToken(token);
 
   };
