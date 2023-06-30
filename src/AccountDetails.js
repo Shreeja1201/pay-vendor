@@ -1,11 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function AccountDetails() {
   const navigate = useNavigate();
+  const [amount, setAmount] = useState("");
 
   const handleCompletionClick = () => {
     navigate("/done");
   };
+
+  const handleAmountChange = (event) => {
+    const token=event.target.value;
+    setAmount(token);
+  };
+
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -22,6 +30,7 @@ function AccountDetails() {
           name="Phone number"
           className="common-input"
           placeholder="enter amount here"
+          onChange={handleAmountChange}
         ></input>
       </div>
 
@@ -72,7 +81,10 @@ function AccountDetails() {
         ></input>
       </div>
 
-      <button className='black-button' style={{position:'absolute'}} onClick={handleCompletionClick}>Make payment amount</button>
+      <button className='black-button' 
+      style={{position:'absolute'}} 
+      onClick={handleCompletionClick}>
+        Make payment ₹{amount === "" ? "0" : 1.02*amount}</button>
     </div>
   );
 }

@@ -11,7 +11,12 @@ function App() {
     navigate("/otp");
   };
   const handleInputChange = (event) => {
-    setPhoneNumber(event.target.value);
+    const value = event.target.value;
+    if (value.length > 10) {
+      setPhoneNumber(value.slice(0, 10));
+    } else {
+      setPhoneNumber(value);
+    }
   };
 
   return (
@@ -45,6 +50,7 @@ function App() {
           name="Phone number"
           placeholder="enter your phone number here"
           onChange={handleInputChange}
+          value={phoneNumber}
         ></input>
         <button className="black-button" onClick={handlePhoneNo}>
           go
