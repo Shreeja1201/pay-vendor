@@ -1,4 +1,6 @@
 import {useNavigate} from 'react-router-dom';
+import mewtIcon from "./Class=Logo white 1.svg";
+
 
 function PaymentOptions() {
     const navigate= useNavigate();
@@ -18,6 +20,21 @@ function PaymentOptions() {
         marginTop: '100px'
       }}
     >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          marginBottom:'20px'
+        }}
+      >
+        
+        <img
+          src={mewtIcon}
+          alt="Mewt Icon"
+          style={{ width: "auto", height: "auto",backgroundColor:'gray' }}
+        ></img>
+      </div>
       <button
         className="black-button"
         style={{

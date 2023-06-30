@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import mewtIcon from "./Class=Logo white 1.svg";
+
 
 function OTP() {
   const [otpToken, setOtpToken] = useState('');
@@ -33,7 +35,21 @@ function OTP() {
 
   return (
     <div className="main-body" style={{ marginTop: '20px' }}>
-      <h1>OTP Screen</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          marginBottom:'20px'
+        }}
+      >
+        <h1>OTP Screen</h1>
+        <img
+          src={mewtIcon}
+          alt="Mewt Icon"
+          style={{ width: "auto", height: "auto",backgroundColor:'gray' }}
+        ></img>
+      </div>
       <div
         style={{
           paddingRight: '10px',

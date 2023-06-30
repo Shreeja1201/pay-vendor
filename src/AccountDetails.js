@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import mewtIcon from "./Class=Logo white 1.svg";
+
 
 function AccountDetails() {
   const navigate = useNavigate();
@@ -17,7 +19,22 @@ function AccountDetails() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <h1>Please enter the valid account details to pay the vendor</h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          marginBottom:'20px'
+        }}
+      >
+        <h1>Please enter the valid account details to pay the vendor</h1>
+        <img
+          src={mewtIcon}
+          alt="Mewt Icon"
+          style={{ width: "auto", height: "auto",backgroundColor:'gray' }}
+        ></img>
+      </div>
+      
       <div
         style={{
           paddingRight: "10px",
